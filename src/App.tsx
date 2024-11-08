@@ -1,14 +1,14 @@
-import ListGroup from "./components/ListGroup/ListGroup";
+// import ListGroup from "./components/ListGroup/ListGroup";
+// import { FaCalendar } from "react-icons/fa";
+// import Button from './components/Button/Button';
+import Like from './components/Like';
 import './App.css';
 
-
 function App() {
-  let items = ["New york", "cocuk", "hund"]
+  
   
   return (
-    <div>
-      <ListGroup item={items} heading='Cities' onSelectItem={() => {}}/>
-    </div>
+    <Like onClick={() => console.log('Clicked')}/>
   );
 }
 
