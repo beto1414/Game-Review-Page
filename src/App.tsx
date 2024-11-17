@@ -1,15 +1,25 @@
 // import ListGroup from "./components/ListGroup/ListGroup";
 // import { FaCalendar } from "react-icons/fa";
-// import Button from './components/Button/Button';
-import Like from './components/Like';
+//import Button from './components/Button/Button';
+//import Like from './components/Like';
 import './App.css';
+import { useState } from 'react';
+import NavBar from './components/NavBar';
+import Cart from './components/cart';
 
 function App() {
-  
-  
+  const [cartItems, setCartItems] = useState(['Product1', 'Product2']);
+
+
   return (
-    <Like onClick={() => console.log('Clicked')}/>
+    <div>
+      <NavBar cartItemsCount={cartItems.length} />
+      <Cart cartItems={cartItems}></Cart>
+    </div>
   );
 }
 
 export default App;
+
+
+
